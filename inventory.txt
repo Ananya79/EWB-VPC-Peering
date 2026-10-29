@@ -1,0 +1,47 @@
+VPC_A_ID vpc-0d5ec88b750c99975 
+
+ewb-a-private	subnet-0e64fcd780e01e615	10.10.2.0/24
+ewb-a-public	subnet-06b35f1375a2b84df	10.10.1.0/24
+
+VPC_B_ID vpc-0e8659bc9ef6bc59d
+
+ewb-b-private    subnet-04c3ba9ff92aaf034       10.20.2.0/24
+
+Internet gateway ID igw-06b77ab6cd77e886a
+VPC ID vpc-0d5ec88b750c99975  ewb-vpc-a
+
+Route table ID
+rtb-0051a0f1dcabaffad
+VPC
+vpc-0e8659bc9ef6bc59d | ewb-vpc-b
+Main
+No
+Explicit subnet associations
+subnet-04c3ba9ff92aaf034 / ewb-b-private
+
+
+Route table ID
+rtb-0f5e12041d9153398
+VPC
+vpc-0d5ec88b750c99975 | ewb-vpc-a
+Main
+No
+
+Route table ID
+rtb-060113343dce0ca4c
+VPC
+vpc-0d5ec88b750c99975 | ewb-vpc-a
+Main
+No
+Explicit subnet associations
+subnet-0e64fcd780e01e615 / ewb-a-private
+
+
+ewb-sg-bastion	SSH, TCP 22	                /32 (your IP)
+ewb-sg-app-a	Custom ICMP, Echo Request	10.20.1.10/32	
+ewb-sg-app-a	SSH, TCP 22	                10.10.1.10/32	
+ewb-sg-app-b	SSH, TCP 22	                10.10.1.10/32	
+ewb-sg-app-b	Custom ICMP, Echo Request	10.10.2.10/32	
+
+
+Peering Connection ID pcx-04f951d4dc701aced
